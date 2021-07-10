@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import interest
 
-# Create your views here.
+def home(request):
+	inter=interest.objects
+	return render(request,'interests/home.html',{'inter':inter})
