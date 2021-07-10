@@ -1,8 +1,9 @@
 
 from django.contrib import admin
 from django.urls import path,include
-import internships.views
+from. import views
 
 urlpatterns = [
-    path('',views.interns,name='intern'),
+    path('',views.internsh,name='intern'),
+    path('<int:intern_id>/',views.details,name='detail'),
 ]
